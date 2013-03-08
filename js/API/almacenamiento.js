@@ -11,9 +11,9 @@ function iniciarBD(){
 	},function(err){
 		alert(err.code);
 		},function(){
-		window.localStorage.setItem('Usuaroa',$('#regNombre').val());
-		window.localStorage.setItem('Id', dispositivo()['Id']);
-		pgAlert('Reservas', 'Ha sido registrado');
+		window.localStorage.setItem('Usuario',$('#regNombre').val());
+		window.localStorage.setItem('Id',dispositivo()['Id']);
+		pgAlert('Reservas','Ha sido registrado');
 		window.location.href="#page";
 		});
 }
@@ -65,9 +65,12 @@ function saveReserva(){
 		tx.executeSql('INSERT INTO reserva (rId,fecha,habitaciones,personas,estancia) VALUES (1,'+fecha.getDate()+'/'+fecha.getMonth()+'/'+fecha.getFullYear()+','+habit+','+pers+','+dias+')');
 		
 		},function(err){
+			
 			pgAlert('Error',err.code);
+		
 		},function(){
-			paAlert('Guardado Localmente', 'Esperando conectar al Servidor');
+			
+			paAlert('Guardado Localmente','Esperando conectar al Servidor');
 		});
 	
 	//esta Alerta genera error en Windows.
