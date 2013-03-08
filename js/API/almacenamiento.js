@@ -6,12 +6,15 @@ function iniciarBD(){
 		tx.executeSql('CREATE TABLE IF NOT EXIST historial(hId unique, fecha, habitaciones, personas, estancia');
 		tx.executeSql('CREATE TABLE IF NOT EXIST reserva(hId unique, fecha, habitaciones, personas, estancia');
 		//tx.executeSql('DELETE FROM reserva WHERE rID=1');
-		tx.executeSql('INSERT INTO reserva (rId, fecha, haitaciones, personas, estancia');
+		//tx.executeSql('INSERT INTO reserva (rId, fecha, haitaciones, personas, estancia');
 		
 	},function(err){
 		alert(err.code);
 		},function(){
-		alert('ok');
+		window.localStorage.setItem('Usuaroa',$('#regNombre').val());
+		window.localStorage.setItem('Id', dispositivo()['Id']);
+		pgAlert('Reservas', 'Ha sido registrado');
+		window.location.href="#page";
 		});
 }
 
