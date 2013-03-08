@@ -53,6 +53,7 @@ function sendData(){
 	document.addEventListener("onlone",function(){
 		leerReservas();
 		},false);
+		
 	}
 
 function reservar(){
