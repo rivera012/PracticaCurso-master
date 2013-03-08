@@ -24,7 +24,7 @@ function leeHistorial(){
 		function(tx1,results){
 			for(i=0; i< results.rows.length;i++){
 				
-				alert(results.rows.item(i).hId);
+				$('#prueSQL').text(results.rows.item(i).hId);
 			}
 			
 		},function(err){

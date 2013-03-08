@@ -30,6 +30,7 @@ $(document).ready(function(e){
 		});
 		
 		reservar();
+		sendData();
 			
 	}, false);
 });
@@ -47,6 +48,12 @@ function syncRegs(){
 		leerHistorial();
 	}, false);
 }
+
+function sendData(){
+	document.addEventListener("onlone",function(){
+		leerReservas();
+		},false);
+	}
 
 function reservar(){
 	$('#nr1 ul[data-role=listview] .opc').
