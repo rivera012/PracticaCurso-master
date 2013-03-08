@@ -29,6 +29,7 @@ $(document).ready(function(e){
 			leerReserva();
 		});
 		
+		reservar();
 			
 	}, false);
 });
