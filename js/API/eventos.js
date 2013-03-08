@@ -35,7 +35,11 @@ $(document).ready(function(e){
 });
 
 function isLogin(){
-	return false;
+	if (window.localStorage.getItem('Usuario')!=undefined)
+		return true;
+	else
+		return false;
+
 }
 
 function syncRegs(){
